@@ -15,5 +15,3 @@ module.exports = (sequelize, DataTypes) => {
 
   return PostCategory;
 };
-
-module.exports = User;
