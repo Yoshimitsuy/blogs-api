@@ -1,4 +1,4 @@
-const express = require('express');  // eeebaaa
+const express = require('express');
 
 // ...
 
