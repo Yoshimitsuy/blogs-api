@@ -12,7 +12,7 @@ const login = async ({ email, password }) => {
   if (!data) return null;
 
   const token = jwt.sign(
-    { id: data.id },
+    { email: data.email },
     JWT_SECRET,
     JWT_CONFIG,
   );
