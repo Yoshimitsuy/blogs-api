@@ -14,7 +14,7 @@ const tokenValidation = (req, res, next) => {
     if (err.message === 'jwt must be provided') {
       return res.status(401).json({ message: 'Token not found' });
     }
-
+  
     console.error('JWT error:', err);
     return res.status(401).json({ message: 'Expired or invalid token' });
   }

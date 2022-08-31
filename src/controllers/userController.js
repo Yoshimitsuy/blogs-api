@@ -1,4 +1,4 @@
-const { createUser, getAll } = require('../services/userService');
+const { createUser, getAll, getbyPk } = require('../services/userService');
 
 const postUser = async (req, res) => {
   console.log('controller');
@@ -23,7 +23,20 @@ const getAllUsers = async (req, res) => {
   return res.status(200).json(data);
 };
 
+const getById = async (req, res) => {
+ const { id } = req.params;
+
+ const data = await getbyPk(id);
+
+ if (!data) {
+  return res.status(404).json({ message: 'User does not exist' });
+ }
+
+ return res.status(200).json(data);
+};
+
 module.exports = {
   postUser,
   getAllUsers,
+  getById,
 };
