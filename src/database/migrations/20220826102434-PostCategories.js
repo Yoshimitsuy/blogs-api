@@ -16,6 +16,7 @@ module.exports = {
           key: 'id',
         },
         primaryKey: true,
+        foreignKey: true,
       },
 
       categoryId: {
@@ -25,6 +26,7 @@ module.exports = {
           key: 'id',
         },
         primaryKey: true,
+        foreignKey: true,
       },
     });
   },

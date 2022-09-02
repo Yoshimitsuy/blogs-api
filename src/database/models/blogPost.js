@@ -14,12 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     updated: DataTypes.DATE,
   }, {
     timestamps: false,
-    tableName: 'BlogPost',
+    tableName: 'BlogPosts',
   });
 
   BlogPost.associate = (models) => {
     BlogPost.belongsTo(models.User, {
-      foreignKey: 'userId'
+      foreignKey: 'userId',
+      as: 'user',
     })
   }
 

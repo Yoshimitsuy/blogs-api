@@ -17,12 +17,17 @@ module.exports = (sequelize, DataTypes) => {
 
     models.Category.belongsToMany(models.BlogPost, {
       through: PostCategory,
-      foreingKey: 'postId',
+      foreignKey: 'postId',
+      // otherKey: 'categoryId',
+      as: 'BlogPosts',
+      
     });
 
     models.BlogPost.belongsToMany(models.Category, {
       through: PostCategory,
-      foreingKey: 'categoryId',
+      foreignKey: 'categoryId',
+      // otherKey: 'postId',
+      as: 'categories',
     });
   };
 

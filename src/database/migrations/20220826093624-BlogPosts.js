@@ -33,6 +33,7 @@ module.exports = {
           model: 'Users',
           key: 'id',
         },
+        foreignKey: true,
       },
 
       published: {
